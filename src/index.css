@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+html{
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary: #000;
+  --secondery:rgb(61,59,64);
+  --border: rgba(251, 249, 241, 0.385);
+  --title: rgb(243, 241, 241);
+  --subtitle: rgb(198, 196, 191);
+  --blue:  rgb(0,153,247);
+  --headerColor: rgb(127, 123, 134);
+}
+
+.light{
+--primary: #fff;
+--secondery: rgb(254, 254, 254);
+--border: rgb(228, 227, 225);
+--title: rgb(10, 10, 10);
+--subtitle: rgb(67, 67, 65);
+--headerColor: #e7e6e6;
+}
+
+i.sun{color: rgba(255, 255, 0, .7)}
+
+body{
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+  background-color: var(--secondery);
+  padding: 4rem;
+}
+
+.separator{
+ border-bottom: 1px solid var(--border);
+ margin: 3rem 0;
+ width: 100%;
+}
+
+ul li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+button{
+  cursor: pointer;
+}
+
+
+
+.border{
+  border: 1px solid red;
+}
+
+/**********scroll bar*****************/
+
+::-webkit-scrollbar{
+  width: .9rem;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 4px;
+  background-color: rgb(94, 65, 97)
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 3px;
+  background-color: #595151;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #3b3535;
+}
+
+
+/**************up button***************/
+
+ div.container a.goup{
+  position: fixed;
+  background-color: var(--blue);
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  right: 4.5%;
+  bottom: 1rem;
+  border: 1px solid #fff;
+}
+
+div.container a.goup:hover{
+  background-color: #1170d6;
+}
+
+a.goup i{
+  color: #fff;
+  margin: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/*************media****************/
+
+
+
+@media (max-width: 1000px) {
+  .container{
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  div.container a.goup{
+    opacity: .6;
+  }
+  
+  div.container a.goup:hover{
+    background-color: var(--blue);
+    opacity: 1;
+  }
+
+}
+
+@media (max-width: 600px) {
+   .container{
+    width: 98%;
+    padding: .9rem;
+   }
+}

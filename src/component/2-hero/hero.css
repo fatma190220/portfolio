@@ -1,0 +1,60 @@
+
+
+
+
+.left-div{
+    flex-grow: 1;
+    margin-top: 2rem;
+}
+
+div.avatar-div.flex{
+    gap: 15px;
+    align-items: end; 
+    margin-bottom: 17px;
+}
+
+.avatar{
+   width: 5rem;
+    border: 1px solid rgba(245, 205, 6, 0.941);
+    border-radius: 50%;
+    padding: 1px;
+}
+
+.avatar-div i{
+    color: var(--blue);
+}
+
+.left-div h1{
+    color: var(--title);
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.left-div p{
+    color: var(--subtitle);
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.hero-icons{
+    gap: 10px;
+   
+}
+
+.hero-icons i{
+    color: var(--subtitle);
+    font-size: 1.3rem;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.hero-icons i:hover{
+  color: var(--title);
+  font-size: 1.4rem;
+}
+
+@media (max-width : 1200px) {
+    div.animation{
+        display: none;
+    }
+}

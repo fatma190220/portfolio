@@ -1,0 +1,125 @@
+/**********head tile******************/
+
+
+
+
+form.flex{
+    flex-direction: column;
+    gap: 2rem;
+    align-items: start;
+}
+
+.container h2 i{
+    color: var(--subtitle);
+    margin-right: 2rem;
+}
+
+section.contact p{
+    color: var(--subtitle);
+    line-height: 2rem;
+    margin-bottom: 40px;
+   margin-top: 20px;
+}
+
+
+form label{
+    color: var(--subtitle);
+    margin-right: 20px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+form input, textarea{
+    all: unset;
+    background-color: rgb(55, 53, 53);
+    border: 1px solid rgba(119, 119, 119, .88);
+    border-radius: 5px;
+}
+
+.light form input,.light textarea{
+    background-color: white;
+    border: 1px solid var(--blue);
+    color: black;
+}
+
+form input#email, form textarea#msg{
+    width: 240px;
+    padding: 8px 4px;
+}
+
+form textarea#msg{
+    height: 170px;
+    resize: vertical;
+}
+
+form textarea#msg:focus,form input#email:focus,
+form textarea#msg:hover,form input#email:hover{
+    border:1px solid rgba(94, 186, 243,.77);
+}
+
+form button.submit{
+    width: 8rem;
+     padding: 12px;
+     text-transform: capitalize;
+     background-color: rgba(36,37,46,1);
+     color: var(--title);
+     outline: none;
+     border-radius: 5px;
+     transition: .5s;
+     border: 1px solid rgba(94, 186, 243,.77);
+}
+
+.light form button.submit{
+    background-color: aliceblue;
+}
+
+form button.submit:hover{
+    scale: .97;
+}
+
+button:disabled{
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+
+/**************media qiery****************/
+
+
+@media (max-width : 1200px) {
+    div.animation{
+        display: none;
+    }
+}
+
+@media (max-width : 600px) {
+
+    div.animation{
+        display: none;
+    }
+
+    form.flex{
+        flex-direction: column;
+        margin: auto;
+        width: 80%;
+    }
+
+    div.email-input,div.msg-input{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    form div.flex #email,form div.flex #msg{
+        width: 100%;
+    }
+
+    form label{
+        margin-bottom: 11px;
+    }
+
+    form button.submit{
+        width: 50%;
+        align-self: center;
+    }
+}

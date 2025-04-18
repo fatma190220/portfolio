@@ -1,0 +1,144 @@
+/***************** header design************/
+
+
+header ul li a{
+    color: #ffffff;
+    opacity: .9;
+}
+
+header{
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+header nav {
+    background-color: var(--headerColor);
+    padding: 15px;
+    border-radius: 55px;
+    box-shadow: 1px 1px 40px  var(--headerColor);
+}
+
+header ul {
+    gap: 16px;
+}
+
+header ul li a{
+    font-weight: 500;
+    font-size: .99rem;
+    transition: .5s;
+    color: var(--title);
+}
+
+header ul li a:hover{
+    font-weight: 500;
+    color: rgb(67, 67, 249);
+    font-size: 1.1rem;
+    opacity: 1;
+}
+
+
+/**************model*****************/
+
+.back{
+    inset:0 ;
+    background-color: rgba(43, 32, 32, .91);
+    position: fixed;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+}
+
+.model{
+    animation: buttonrotate .7s 1;
+    margin-top: 2rem;
+    border-radius: 30px;
+    width:75%;
+    margin:2rem auto;
+    background-color: var(--secondery);
+    opacity: 1;
+    padding: 10px 16px;
+}
+
+.model li{
+   padding: .8rem 0rem;
+    border-bottom: 1px solid var(--border);
+    margin-left: 1rem;
+}
+
+.model li:last-child{
+    border-bottom: none;
+}
+
+.modelbutton{
+    display: none;
+}
+
+
+/************header icons*****************/
+
+header .modebutton, .modelbutton{
+    background-color:  var(--headerColor);
+   width: 2.5rem;
+   height: 2.5rem;
+    border-radius: 100%;
+    outline: none;
+    opacity: .9;
+    border: 1px solid rgba(244, 244, 78, 0.8);
+    font-size: large;
+    transition: .5s;
+}
+
+header .modebutton{
+    color: var(--subtitle);
+}
+
+header .modebutton{
+    color: white;
+}
+
+header .modebutton:hover, .modelbutton:hover{
+    opacity: 1;
+    border: 1px solid rgba(246, 192, 0, 0.8);
+    transition: 0.5s;
+}
+
+header .modebutton:active, .modelbutton:active{
+   scale:.9;
+}
+
+.closebutton{
+ display: block;
+ margin-left: auto;
+ background-color: transparent;
+ border: none;
+ font-size:1.6rem;
+ margin-top: .5rem;
+ margin-right: .5rem;
+ transition: .5s;
+}
+
+.closebutton:hover{
+    font-size: 1.7rem;
+    color: crimson;
+    transform: rotate(180deg);
+}
+
+
+@keyframes buttonrotate {
+    0% {scale: 0;}
+    70% {scale: 1..8;}
+    100% {scale: 1;}
+}
+
+
+/*********media query***************/
+
+
+@media (width <700px) {
+    header nav{
+        display: none;
+    }
+
+    .modelbutton{
+        display: block;
+    }
+}
